@@ -9,7 +9,6 @@
      <!--=====FAB ICON=======-->
      <link rel="shortcut icon" href="{{ asset('assets/img/logo/title1.svg') }}" type="image/x-icon">
 
-
      <!--=====CSS=======-->
      <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
      <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.css') }}">
@@ -23,9 +22,36 @@
      <link rel="stylesheet" href="{{ asset('assets/css/utility.css') }}">
      <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
 
-
      <!--=====JQUERY=======-->
      <script src="{{ asset('assets/js/jquery-3-7-1.min.js') }}"></script>
+<style>
+   @media (max-width: 768px) {
+    .about2 .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about2 .col-12 {
+        text-align: center;
+    }
+
+    .about2-images .image {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .heading2 {
+        padding: 0 15px;
+    }
+
+    .about-check-list {
+        text-align: left;
+        padding-left: 0;
+    }
+}
+
+</style>
+
 </head>
 <body class="body">
 <div class="paginacontainer"> 
@@ -40,9 +66,6 @@
 
 <!--=====progress END=======-->
 
-<!--=====PRELOADER START=======-->
-
-<!--=====PRELOADER END=======-->
 
 <!--=====HEADER START=======-->
 <header>
@@ -52,7 +75,7 @@
         <div class="col-12">
           <div class="header-elements">
             <div class="site-logo">
-              <a href="#home">
+              <a href="{{ route('welcome') }}">
                <img src="{{ asset('assets/img/logo/Orange Health-17.png') }}" alt="Orange Health Logo">
               </a>
             </div>
@@ -61,13 +84,13 @@
                 <ul id="list-example">
                     <li><a class="list-group-item list-group-item-action" href="#about">About Us</a></li>
                     <li><a class="list-group-item list-group-item-action" href="#services">Our Services</a></li>
-                    <li><a class="list-group-item list-group-item-action" href="#team">Our Leadership</a></li>
+                   <!--  <li><a class="list-group-item list-group-item-action" href="#team">Our Leadership</a></li> -->
                     <li><a class="list-group-item list-group-item-action" href="#contact">Contact Us</a></li>
                  </ul>
             </div>
 
             <div class="header1-buttons">
-                <a href="#contact" class="theme-btn4 btn_theme_active4 wow fadeInDown" data-wow-duration="0.8s">Get Expert Care Today<span></span></a>
+                <a href="#contact" class="theme-btn4 btn_theme_active4 wow fadeInDown" data-wow-duration="0.8s">Get Expert Advice Today<span></span></a>
             </div>
 
           </div>
@@ -162,7 +185,7 @@
 
           <!--=====HERO AREA START=======-->
 
-          <div class="hero2 _relative" style="background-image: url({{ asset('assets/img/bg/hero2-bg.jpg') }});">
+          <div class="hero2 _relative" style="background-image: url({{ asset('assets/img/bg/hero2-bg.jpg') }})">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-7">
@@ -171,17 +194,17 @@
                             <p class="mt-24 text-16 pera1 leading-26 font-normal">Empowering global health with affordable, high-quality solutions.</p>
                             <div class="buttons mt-30">
                                 <a href="#services" class="theme-btn4 btn_theme_active4 wow fadeInDown" data-wow-duration="0.8s">Explore Our Services<span></span></a>
-                                <a href="#contact" class="theme-btn5 ml-16 btn_theme_active5 wow fadeInDown" data-wow-duration="0.8s">Get Expert Care Today<span></span></a>
+                                <a href="#contact" class="theme-btn4 btn_theme_active4 wow fadeInDown" data-wow-duration="0.8s">Get Expert Advice Today<span></span></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-5">
                         <div class="main-images">
                             <div class="image" data-aos="zoom-out" data-aos-duration="800">
-                                <img src="{{ asset('assets/img/hero/hero2-main-image.png') }}" alt="Healthcare Image">
+                                <img src="{{ asset('assets/img/new/Hero-Section-564-x-626.jpg') }}" alt="Healthcare Image">
                             </div>
                             <div class="shape animate3">
-                                <img src="{{ asset('assets/img/shapes/hero2-shape4.png') }}" alt="">
+                                <img src="{{ asset('assets/img/shnpes/hero2-shape4.png') }}" alt="">
                             </div>
                         </div>
                     </div>
@@ -205,40 +228,97 @@
 
         <!--=====ABOUT AREA START=======-->
 
-          <div class="about2 sp" id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="about2-images _relative">
-                            <div class="image absolute top-0 left-0" data-aos="zoom-out" data-aos-duration="800">
-                                <img src="{{ asset('assets/img/about/about2-image.png') }}" alt="About Us Image">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="heading2">
-                            <h2 class="text-44 sm:text-30 md:text-30 leading-56 font-semibold title1 text-anime-style-3">About Us</h2>
-                            <p class="mt-16 text-16 font-normal pera1 leading-26">Founded in 2019, Orange Health is a global pharmaceutical leader dedicated to delivering high-quality and affordable medicines to patients worldwide. With 70 passionate employees across 18 offices in 4 countries, we are committed to advancing healthcare through innovation and excellence.</p>
-                            <p class="mt-16 text-16 font-normal pera1 leading-26">Our portfolio spans Manufacturing and Commercial Pharmaceuticals, featuring injectables, prescription drugs, OTC medicines, and more. Operating with cutting-edge facilities approved by FDA, TGA, and EDQM, we uphold the highest standards in pharmaceutical production.</p>
-                            <div class="about2-features mt-30 flex items-center" data-aos="fade-left" data-aos-duration="1000">
-                                <div class="smoll-image">
-                                    <img src="{{ asset('assets/img/about/about2-smoll-image.png') }}" alt="">
-                                </div>
-                                <div class="about-check-list pl-20">
-                                    <ul>
-                                        <li class="title1 text-16 leading-16 font-semibold pb-16"><span class="check"><i class="fa-solid fa-check"></i></span> Health, Wellness and Insurance</li>
-                                        <li class="title1 text-16 leading-16 font-semibold pb-16"><span class="check"><i class="fa-solid fa-check"></i></span> 97% Customer Satisfaction</li>
-                                        <li class="title1 text-16 leading-16 font-semibold"><span class="check"><i class="fa-solid fa-check"></i></span> Family Scholarship Program</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="mt-30" data-aos="fade-left" data-aos-duration="1200">
-                                <a href="research.html" class="theme-btn4 btn_theme_active4 wow fadeInDown" data-wow-duration="0.8s">Discover More<span></span></a>
-                            </div>
-                        </div>
+        <div class="about2 sp" id="about">
+    <div class="container">
+        <div class="row">
+        
+            <!-- Image Section -->
+            <div class="col-lg-6 col-12 order-1 order-lg-2">
+                <div class="about2-images _relative">
+                    <div class="image mx-auto" data-aos="zoom-out" data-aos-duration="800">
+                        <img src="{{ asset('assets/img/new/About-us-570-x-530.jpg') }}" alt="About Us Image" class="img-fluid">
                     </div>
                 </div>
             </div>
+
+             <!-- Text Section -->
+             <div class="col-lg-6 col-12 order-2 order-lg-1">
+                <div class="heading2">
+                    <h2 class="text-44 sm:text-30 md:text-30 leading-56 font-semibold title1 text-anime-style-3">About Us</h2>
+                    <p class="mt-16 text-16 font-normal pera1 leading-26">
+                        Founded in 2019, Orange Health is a global pharmaceutical leader dedicated to delivering high-quality and affordable medicines to patients worldwide. With 70 passionate employees across 18 offices in 4 countries, we are committed to advancing healthcare through innovation and excellence.
+                    </p>
+                    <p class="mt-16 text-16 font-normal pera1 leading-26">
+                        Our portfolio spans Manufacturing and Commercial Pharmaceuticals, featuring injectables, prescription drugs, OTC medicines, and more. Operating with cutting-edge facilities approved by FDA, TGA, and EDQM, we uphold the highest standards in pharmaceutical production.
+                    </p>
+                    <div class="about2-features mt-30 flex items-start" data-aos="fade-left" data-aos-duration="1000">
+                        <div class="smoll-image">
+                            <img src="{{ asset('assets/img/new/About-Us-200-x-120.jpg')}}" alt="">
+                        </div>
+                        <div class="about-check-list pl-20">
+                            <ul>
+                                <li class="title1 text-16 leading-16 font-semibold pb-16">
+                                    <span class="check"><i class="fa-solid fa-check"></i></span> Health, Wellness and Insurance
+                                </li>
+                                <li class="title1 text-16 leading-16 font-semibold pb-16">
+                                    <span class="check"><i class="fa-solid fa-check"></i></span> 97% Customer Satisfaction
+                                </li>
+                                <li class="title1 text-16 leading-16 font-semibold">
+                                    <span class="check"><i class="fa-solid fa-check"></i></span> Family Scholarship Program
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-30" data-aos="fade-left" data-aos-duration="1200">
+                        <a href="research.html" class="theme-btn4 btn_theme_active4 wow fadeInDown" data-wow-duration="0.8s">Discover More<span></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+          <!-- Vision, Mission, and Values Section -->
+          <div class="vision-mission-values sp" style="background-color: #F6F8FA; padding: 60px 0;">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-12">
+                          <div class="heading2 text-center">
+                              <h2 class="text-44 sm:text-30 md:text-30 leading-56 font-semibold title1 text-anime-style-3">Our Vision, Mission, and Values</h2>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row mt-30">
+                      <div class="col-lg-4 col-md-6">
+                          <div class="vision-box text-center" data-aos="fade-up" data-aos-duration="700">
+                              <div class="vision-image mb-20">
+                                  <img src="{{ asset('assets/img/new/vision.jpg') }}" alt="Our Vision" class="img-fluid rounded" style="height: 400px; width: 100%; object-fit: cover;">
+                              </div>
+                             <!--  <h3 class="text-24 leading-26 font-semibold title1">Vision</h3>
+                              <p class="mt-10 text-16 font-normal pera1 leading-26">To deliver value to all our stakeholders by providing affordable, high-quality medicines globally.</p> -->
+                          </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                          <div class="mission-box text-center" data-aos="fade-up" data-aos-duration="900">
+                              <div class="mission-image mb-20">
+                                  <img src="{{ asset('assets/img/new/mission.jpg') }}" alt="Our Mission" class="img-fluid rounded" style="height: 400px; width: 100%; object-fit: cover;">
+                              </div>
+                              <!-- <h3 class="text-24 leading-26 font-semibold title1">Mission</h3>
+                              <p class="mt-10 text-16 font-normal pera1 leading-26">To improve the health and quality of life of patients through innovation and excellence.</p> -->
+                          </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                          <div class="values-box text-center" data-aos="fade-up" data-aos-duration="1100">
+                              <div class="values-image mb-20">
+                                  <img src="{{ asset('assets/img/new/Values.jpg') }}" alt="Our Values" class="img-fluid rounded" style="height: 400px; width: 100%; object-fit: cover;">
+                              </div>
+                              <!-- <h3 class="text-24 leading-26 font-semibold title1">Values</h3>
+                              <p class="mt-10 text-16 font-normal pera1 leading-26">Integrity, Innovation, Collaboration, and Excellence are the foundations of everything we do.</p> -->
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
 
           <!--=====ABOUT AREA END=======-->
@@ -259,44 +339,124 @@
                         <div class="service2-slider" data-aos="fade-up" data-aos-duration="800">
                             <div class="service2-single-slider">
                                 <div class="image">
-                                    <img src="{{ asset('assets/img/service/service2-img1.png') }}" alt="Diagnostics">
+                                    <img src="{{ asset('assets/img/new/Services--Diagnostics.jpg') }}" alt="Diagnostics">
                                 </div>
                                 <div class="heading-area">
                                     <h4 class="inline-block mb-10 text-18 leading-18 font-semibold text-white">Diagnostics</h4>
-                                    <p class="mt-16 text-16 font-normal leading-26 text-white">Leveraging advanced imaging and laboratory technologies, we deliver precise and timely diagnostic solutions to support accurate treatments and better health outcomes.</p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#diagnosticsModal">
+                                        Learn More
+                                    </button>
                                 </div>
                             </div>
                             <div class="service2-single-slider">
                                 <div class="image">
-                                    <img src="{{ asset('assets/img/service/service2-img2.png') }}" alt="Medical Consultation">
+                                    <img src="{{ asset('assets/img/new/Services---Consultancy.jpg') }}" alt="Medical Consultation">
                                 </div>
                                 <div class="heading-area">
                                     <h4 class="inline-block mb-10 text-18 leading-18 font-semibold text-white">Medical Consultation</h4>
-                                    <p class="mt-16 text-16 font-normal leading-26 text-white">With a dedicated team of healthcare professionals, we offer expert advice and personalized care for a wide range of medical conditions, empowering patients with informed health decisions.</p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#medicalConsultationModal">
+                                        Learn More
+                                    </button>
                                 </div>
                             </div>
                             <div class="service2-single-slider">
                                 <div class="image">
-                                    <img src="{{ asset('assets/img/service/service2-img3.png') }}" alt="Dossier Creation">
+                                    <img src="{{ asset('assets/img/new/Services---Dossier-Information.jpg') }}" alt="Dossier Creation">
                                 </div>
                                 <div class="heading-area">
                                     <h4 class="inline-block mb-10 text-18 leading-18 font-semibold text-white">Dossier Creation</h4>
-                                    <p class="mt-16 text-16 font-normal leading-26 text-white">We provide evidence-based medical dossiers that communicate the value of treatments to healthcare providers and payers, bridging the gap between innovation and patient care.</p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#dossierCreationModal">
+                                        Learn More
+                                    </button>
                                 </div>
                             </div>
                             <div class="service2-single-slider">
                                 <div class="image">
-                                    <img src="{{ asset('assets/img/service/service2-img4.png') }}" alt="Orthodox Medicines">
+                                    <img src="{{ asset('assets/img/new/services---orthodox-medicines.jpg') }}" alt="Orthodox Medicines">
                                 </div>
                                 <div class="heading-area">
                                     <h4 class="inline-block mb-10 text-18 leading-18 font-semibold text-white">Orthodox Medicines</h4>
-                                    <p class="mt-16 text-16 font-normal leading-26 text-white">Offering a wide array of high-quality, evidence-based pharmaceutical products, we ensure safety and efficacy for every patient, supported by personalized medication management and consultations.</p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#orthodoxMedicinesModal">
+                                        Learn More
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+          </div>
+
+          <!-- Modal for Diagnostics -->
+          <div class="modal fade" id="diagnosticsModal" tabindex="-1" aria-labelledby="diagnosticsModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="diagnosticsModalLabel">Diagnostics</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          Leveraging advanced imaging and laboratory technologies, we deliver precise and timely diagnostic solutions to support accurate treatments and better health outcomes.
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Modal for Medical Consultation -->
+          <div class="modal fade" id="medicalConsultationModal" tabindex="-1" aria-labelledby="medicalConsultationModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="medicalConsultationModalLabel">Medical Consultation</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          Our expert medical consultation services provide personalized care and guidance to help you achieve optimal health outcomes.
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Modal for Dossier Creation -->
+          <div class="modal fade" id="dossierCreationModal" tabindex="-1" aria-labelledby="dossierCreationModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="dossierCreationModalLabel">Dossier Creation</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          We offer comprehensive dossier creation services to ensure compliance with regulatory standards and facilitate market access.
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Modal for Orthodox Medicines -->
+          <div class="modal fade" id="orthodoxMedicinesModal" tabindex="-1" aria-labelledby="orthodoxMedicinesModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="orthodoxMedicinesModalLabel">Orthodox Medicines</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          Our range of orthodox medicines is designed to meet the highest standards of quality and efficacy, ensuring reliable treatment options.
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      </div>
+                  </div>
+              </div>
           </div>
 
           <!--=====SERVICE AREA END=======-->
@@ -365,7 +525,7 @@
 
           <!--=====TEAM AREA START=======-->
 
-          <div class="team2 sp" id="team">
+         <!--  <div class="team2 sp" id="team">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
@@ -458,7 +618,7 @@
                     </div>
                 </div>
             </div>
-          </div>
+          </div> -->
 
           <!--=====TEAM AREA END=======-->
 
@@ -477,7 +637,7 @@
                     <div class="col-lg-5">
                         <div class="cta2-images">
                             <div class="image">
-                                <img src="{{ asset('assets/img/others/cta2-image.png') }}" alt="Healthcare Solutions">
+                                <img src="{{ asset('assets/img/new/Partner-with-us.jpg') }}" alt="Healthcare Solutions">
                             </div>
                             <div class="shape animate3">
                                <!--  <img src="{{ asset('assets/img/shapes/cta2-shape.png') }}" alt=""> -->
@@ -602,5 +762,7 @@
                 <script src="{{ asset('assets/js/animation.js') }}"></script>
                 <script src="{{ asset('assets/js/main.js') }}"></script>
 
+</body>
+</html>
 </body>
 </html>
