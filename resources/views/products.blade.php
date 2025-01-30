@@ -24,7 +24,7 @@
 
     <!--=====JQUERY=======-->
     <script src="{{ asset('assets/js/jquery-3-7-1.min.js') }}"></script>
-    <style>
+  {{--  <style>
         @media (max-width: 768px) {
             .about2 .row {
                 flex-direction: column;
@@ -51,7 +51,7 @@
         }
 
     </style>
-
+--}}
 </head>
 <body class="body">
 <div class="paginacontainer">
@@ -69,7 +69,7 @@
 
 <!--=====HEADER START=======-->
 <header>
-    <div class="header-area header-area2 header-area-all d-none d-lg-block" id="header">
+    <div class="header-area header-area2 header-area-all d-none d-lg-block" id="header" style="margin-top: 20px;">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -82,10 +82,10 @@
 
                         <div class="main-menu-ex main-menu-ex1">
                             <ul id="list-example">
-                                <li><a class="list-group-item list-group-item-action" href="#about">About Us</a></li>
-                                <li><a class="list-group-item list-group-item-action" href="#services">Our Services</a></li>
-                                 <li><a class="list-group-item list-group-item-action" href="{{route('products')}}">Products</a></li>
-                                <li><a class="list-group-item list-group-item-action" href="#contact">Contact Us</a></li>
+                                <li><a class="list-group-item list-group-item-action" href="{{url('/')}}">About Us</a></li>
+                                <li><a class="list-group-item list-group-item-action" href="{{url('/')}}">Our Services</a></li>
+                                <li><a class="list-group-item list-group-item-action" href="{{route('products')}}">Products</a></li>
+                                <li><a class="list-group-item list-group-item-action" href="{{url('/')}}">Contact Us</a></li>
                             </ul>
                         </div>
 
@@ -99,6 +99,7 @@
         </div>
     </div>
 </header>
+
 
 <!--=====HEADER END=======-->
 
@@ -128,16 +129,17 @@
     <div class="mobile-nav">
 
         <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Our Services</a></li>
+            <li><a href="{{url('/')}}">About Us</a></li>
+            <li><a href="{{url('/')}}">Our Services</a></li>
             <li><a href="{{route('products')}}">Products</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="{{url('/')}}">Contact Us</a></li>
         </ul>
         <div class="mobile-button">
-            <a class="theme-btn4 btn_theme_active4" href="#contact">Get Expert Advise Today <i class="fa-solid fa-arrow-right"></i></a>
+            <a class="theme-btn3" href="#contact">Get Expert Advise Today <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
         <div class="footer-contact-area1 md:pl-0 pl-20 sm:pl-0 mt-30">
+            <h3 class="text-24 leading-26 font-semibold title1 pb-10">Get in touch</h3>
             <div class="contact-box d-flex">
                 <div class="icon">
                     <img src="assets/img/icons/footer1-icon1.svg" alt="">
@@ -183,12 +185,45 @@
 
 <!--=====Mobile header end=======-->
 
-<!--=====HERO AREA START=======-->
+    <div style="margin-top: 80px; margin-bottom: -50px;" class="blog2 sp">
+        <div class="container">
+            <div class="row mt-30">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-12 mb-4">
+                    <div class="blog-page-box">
+                        <div class="image image-anime overflow-hidden _relative">
+                            <img style="width: 100%; height: 450px; object-fit: cover;" src="{{asset('assets/img/products/florepressure.jpg')}}" alt="">
+                        </div>
+                    </div>
+                </div>
 
-@yield('content')
+                <div class="col-lg-3 col-md-3 col-sm-12 col-12 mb-4">
+                    <div class="blog-page-box">
+                        <div class="image image-anime overflow-hidden _relative">
+                            <img style="width: 100%; height: 450px; object-fit: cover;" src="{{asset('assets/img/products/forepen.jpg')}}" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12 col-12 mb-4">
+                    <div class="blog-page-box">
+                        <div class="image image-anime overflow-hidden _relative">
+                            <img style="width: 100%; height: 450px; object-fit: cover;" src="{{asset('assets/img/products/waterpurificationsystem.jpg')}}" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12 col-12 mb-4">
+                    <div class="blog-page-box">
+                        <div class="image image-anime overflow-hidden _relative">
+                            <img style="width: 100%; height: 450px; object-fit: cover;" src="{{asset('assets/img/products/waterpurificationtablets.jpg')}}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
-<!--=====FOOTER AREA START=======-->
+        </div>
+    </div>
 
 <div class="footer2 mt-80" id="contact">
     <div class="container">
@@ -275,7 +310,6 @@
     </div>
 </div>
 
-<!--=====FOOTER AREA END=======-->
 
 
 <!--=== js === -->
